@@ -41,7 +41,7 @@ try:
         try:
             next(leitor_csv)  # Pula o cabeçalho, se houver
         except StopIteration:
-            print("⚠️ Arquivo CSV 'capital-social.csv' está vazio ou não tem cabeçalho.")
+            print("⚠️ Arquivo CSV 'lista_de_email.csv' está vazio ou não tem cabeçalho.")
             # Considerar se deve continuar ou sair
             pass # Continua mesmo sem cabeçalho ou vazio
 
@@ -69,7 +69,7 @@ try:
 
             # --- Construção do Email ---
             msg = MIMEMultipart("related")
-            msg['Subject'] = 'Demonstrativo Capital Social 2024 Unimed Gerais de Minas'
+            msg['Subject'] = 'Demonstrativo'
             msg['From'] = EMAIL
             msg['To'] = destinatario
 
@@ -78,8 +78,8 @@ try:
                 <body>
                     <p><strong>Prezado(a) {nome},</strong></p></br>
                     </br>
-                    <p>Em anexo, você encontrará o seu demonstrativo do capital social referente ao ano de 2024.📊</p>
-                    <p>Caso tenha alguma dúvida ou precise de esclarecimento adicionais, por favor, entre em contato conosco pelo telefone (38) 3729-7249 e fale com a Grace. 📞</p>
+                    <p>Em anexo, você encontrará o seu demonstrativo</p>
+                    <p>Caso tenha alguma dúvida ou precise de esclarecimento adicionais</p>
                     <p>Atenciosamente,</p>
                     <div style="text-align: center;">
                     <p>
@@ -137,7 +137,7 @@ try:
             # time.sleep(1) # Pausa por 1 segundo entre os envios
 
 except FileNotFoundError:
-    print(f"❌ Erro Crítico: Arquivo CSV 'capital-social.csv' não encontrado.")
+    print(f"❌ Erro Crítico: Arquivo CSV 'lista_de_email.csv' não encontrado.")
     exit()
 except Exception as e:
     print(f"❌ Erro Crítico ao processar o arquivo CSV: {e}")
