@@ -49,8 +49,13 @@ Este script automatiza o envio de emails para os seus contatos.
     * Erros durante a anexação do PDF.
       
 2.**Lógica de Envio Redundante:** Adicionei try...except dentro da seção de envio do e-mail para lidar com possíveis erros durante a conexão, login ou envio do e-mail.
+
 3. **Tratamento de Erro de Arquivo CSV:** Verificando se o arquivo CSV existe antes de continuar o processamento.
+   
 4. **Validação de Dados:** Adicionei verificações adicionais para garantir que os nomes e endereços de e-mail estejam preenchidos com informações válidas.
+   
 5. **Comentários Mais Detalhados:** Adicionei comentários mais explicativos em cada etapa do código.
+
 6. **Formatação da Saída:** Formatei a saída para exibir o tempo total de execução de forma clara, usando f-strings e :.2f para formatar os segundos.
+    
 7. **Legibilidade:** Melhorei a formatação e indentação do código.
